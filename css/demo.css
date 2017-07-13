@@ -1,81 +1,114 @@
 .header {
-    background-color:#01100B;
+    background-color: #011010;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.32);
+    margin-bottom: 5px;
 }
 
 .logo {
-    position: absolute;
-    left: 0;
-    top: 16px;
-    width: 82px;
-    height: 31px;
+    font-family: 'Bangers', cursive;
+    text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.7);
+    display: inline-block;
+    color: white;
+    width: 217px;
+    font-size: 30px;
+    line-height: 60px;
+    position: relative;
+    transform: skew(0, -3deg);
+
+}
+
+.logo:hover, .logo:focus {
+    color: #f95215;
 }
 
 .text-center {
     width: 100%;
+
     text-align: center;
+
+}
+
+.text-left {
+    width: 100%;
+
+    text-align: left;
 }
 
 .h-title {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    font-size: 30px;
-    color: white;
+    font-size: 38px;
+    padding-left: 250px;
+    padding-top: 150px;
+    padding-bottom: 30px;
+    color: #ff5939;
+
 }
 
 .p-info {
-    color: white;
+    padding-left: 250px;
+    font-size: 20px;
+    color: #ff5939;
 }
 
 .layui-aside {
     position: relative;
+    top: -130px;
     width: 200px;
     height: auto;
     margin-right: -200px;
-    top: 10px;
+
     background-color: #f2f2f2;
 }
 
 .layui-aside-nav-item {
+    transition: all .5s;
+    text-align: center;
+
     border: 1px solid #ddd;
     border-bottom: transparent;
-    text-align: center;
-    transition: all 0.5s;
 }
-.layui-aside-nav-item .btn-reg{
-    padding: 10px 30px;
-    background-color: #01AAED;
-    border-radius: 5px;
+
+.layui-aside-nav-item .btn-reg {
+    font-size: 30px;
+
     box-sizing: border-box;
     margin-top: 5px;
     margin-bottom: 7px;
-    box-shadow: 0  3px  0 #1c85af;
-    color: white;
-    transition: all 0.5s;
-}
-.layui-aside-nav-item .btn-reg:hover{
-    background-color: #1c85af;
+    padding: 44px 35px;
 
+    transition: all .5s;
+
+    color: white;
+    border-radius: 5px;
+    background-color: #f95215;
+    box-shadow: 0 3px 0 #bb3909;
 }
+
+.layui-aside-nav-item .btn-reg:hover {
+    background-color: #bb3909;
+}
+
 .layui-aside-nav-item:last-child {
     border-bottom: 1px solid #ddd;
 }
 
 .layui-aside-nav-item .active {
     background-color: #2679a6;
-
 }
 
 .layui-aside-nav-item a {
     display: inline-block;
-    text-align: left;
+
     padding: 10px 20px 10px 20px;
+
+    text-align: left;
+
     color: black;
 }
 
 .layui-content {
+    box-sizing: border-box;
     width: 920px;
     padding: 10px;
-    box-sizing: border-box;
 }
 
 .layui-content-inner {
@@ -83,48 +116,63 @@
 }
 
 .course-synopsis {
-    width: 100%;
-    background-color: #f2f2f2;
-    padding: 10px;
     box-sizing: border-box;
+    width: 100%;
     margin-bottom: 10px;
+
+    padding: 10px;
+    background-color: #f2f2f2;
 }
 
 .course-synopsis > p {
-    text-indent: 2em;
     line-height: 22px;
+    text-indent: 2em;
 }
 
 .course-box {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    padding: 5px 0 5px 0;
+    box-sizing: border-box;
+}
+
+.course-inner {
+    padding: 10px 90px;
 }
 
 .course {
-    position: relative;
-    width: 150px;
-    padding: 20px;
+    float: left;
+    width: 40%;
     margin-bottom: 15px;
+
+    border-radius: 8px;
     background-color: white;
+    padding: 20px;
     transition: all 0.5s;
-    border-radius: 5px;
+}
+
+.course:nth-child(2n-1) {
+    float: left;
+}
+
+.course:nth-child(2n) {
+    float: right;
 }
 
 .course:hover {
     box-shadow: 0 8px 16px 0 rgba(7, 17, 27, .2);
+
 }
 
 .course:hover .course-img img {
+    transition: all .5s;
     transform: scale(1.2);
-    transition: all 0.5s;
 }
 
 .course-img {
-    width: 150px;
-    height: 150px;
     overflow: hidden;
-    transition: all 0.5s;
+    width: 275px;
+    height: 154px;
+    transition: all .5s;
+    transform: scale(1);
 }
 
 .course-img img {
@@ -132,240 +180,240 @@
     height: 100%;
 }
 
-.course-title > h1, .course-teach > h1 {
+.course-title > h1,
+.course-teach > h1 {
     padding: 5px 0 5px 0;
 }
 
+.course:hover .course-title > h1, .course:hover .course-teach > h1 {
+    color: #f95215;
+}
+
+/*教師*/
 .course-teacher {
-    padding: 0 40px 0 40px;
     box-sizing: border-box;
-    background-color: white;
+    padding: 20px 40px 20px 40px;
+
 }
 
 .teacher-box {
-    height: 150px;
-    width: 380px;
-
-    box-sizing: border-box;
     overflow: hidden;
-
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
 }
 
-.t1 {
-    float: left;
-}
-
-.t2 {
-    float: right;
+.teacher-info:first-child {
+    margin-bottom: 10px;
 }
 
 .teacher-head {
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    border: 4px solid #f2f2f2;
-    overflow: hidden;
-    display: inline-block;
-    margin-top: 30px;
+
+    width: 240px;
+    height: 240px;
+    float: left;
+    background-color: white;
+    border-radius: 5px;
 }
 
-.teacher-head img {
+.head-box {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-left: 20px;
+
+}
+
+.head-box img {
     width: 100%;
     height: 100%;
 }
 
-.teacher-info {
-    margin-top: 30px;
-    width: 260px;
-    display: inline-block;
-    padding-left: 20px;
-    box-sizing: border-box;
-}
+.teacher-name h1 {
 
-.teacher-name {
-    font-weight: bold;
     font-size: 20px;
 }
 
 .teacher-brief {
-    margin-top: 5px;
-    text-indent: 2em;
-}
-
-.division {
-    width: 10px;
+    width: 560px;
+    height: 240px;
     float: left;
-    position: relative;
+    background-color: white;
+    padding: 20px 20px;
+    box-sizing: border-box;
 }
 
-.division:after {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 150px;
-    display: inline-block;
-    background-color: #f2f2f2;
-    transform: skew(-31deg);
-    z-index: 999;
-    left: 22px;
+.teacher-brief p {
+    text-indent: 2em;
+    line-height: 1.8em;
 }
 
 .layui-footer-inner {
-    background-color: rgba(0, 0, 0, 0.53);
     padding: 10px 5px;
+
+    background-color: rgba(0, 0, 0, .53);
 }
 
 .layui-footer-inner p {
-    color: white;
     line-height: 24px;
+
+    color: white;
 }
 
 .gotop {
-    transition: all 0.5s;
+    position: fixed;
+    right: 30px;
+    bottom: 150px;
+
     width: 34px;
     height: 34px;
-    background-image: url("../images/gotop.png");
+
+    cursor: pointer;
+    transition: all .5s;
+
+    opacity: 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-image: url('../images/gotop.png');
     background-repeat: no-repeat;
     background-position: center;
-    position: fixed;
-    bottom: 150px;
-    border: 1px solid #ddd;
-    right: 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    opacity: 0;
-
 }
-.layui-footer{
+
+.layui-footer {
     position: relative;
 }
-.wechat{
+
+.wechat {
     position: absolute;
     top: 0;
     right: 20px;
 }
 
-@media screen and (max-width: 420px) {
+.info {
+    width: 300px;
+    float: left;
+    margin-left: 40px;
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+
+.info p {
+    line-height: 40px;
+}
+
+.map {
+    float: right;
+    width: 400px;
+    height: 250px;
+    border: #ccc solid 1px;
+    font-size: 12px
+
+}
+
+@media screen and (max-width: 600px) {
     .layui-main {
         width: 100%;
     }
 
-    .logo {
-        padding-left: 20px;
-        top: 16px;
-        width: 82px;
-        height: 31px;
-        display: inline-block;
-    }
-
-    .layui-nav li:nth-child(2), .layui-nav li:nth-child(3) {
+    .layui-nav {
         display: none;
     }
 
     .layui-body {
-        height: 300px;
-        background-position: center;
-    }
-    .layui-content{
         width: 100%;
-    }
-    .h-title {
-        padding-top: 100px;
-        padding-bottom: 50px;
-        font-size: 24px;
-        color: white;
+        background-size: cover;
     }
 
-    .p-info {
-        color: white;
+    .layui-body .p-info, .layui-body .h-title {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .layui-body .h-title {
+        font-size: 18px;
+        padding-top: 160px;
+        padding-bottom: 30px;
+    }
+
+    .layui-body .p-info {
+        font-size: 12px;
+    }
+
+    .text-left {
+        text-align: center;
     }
 
     .layui-aside {
         display: none;
     }
 
-    .layui-content-inner {
-        margin-left: 0;
-    }
-
-    .course {
+    .layui-content {
         width: 100%;
     }
-    .t2 {
+
+    .course-inner {
+        padding: 0;
+    }
+
+    .course-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .course:nth-child(2n-1), .course:nth-child(2n) {
         float: none;
+        width: 80%;
+
     }
-    .course-img {
-        width: 150px;
-        height: 150px;
-        overflow: hidden;
-        transition: all 0.5s;
-        display: inline-block;
+
+    .course a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px 10px;
+        box-sizing: border-box;
     }
-    .course-img img {
-        width: 100%;
-        height: 100%;
-    }
-    .course-brief {
-        width: 180px;
-        display: inline-block;
-        vertical-align: top;
-        margin-top: 45px;
-    }
-    .course-title > h1, .course-teach > h1 {
-        padding: 5px 0 5px 0;
-    }
+
     .course-teacher {
-        padding: 0 10px 0 10px;
-        box-sizing: border-box;
-        background-color: white;
+        padding: 0;
     }
-    .teacher-box {
-        position: relative;
-        width: 374px;
+
+    .teacher-head, .teacher-brief {
+        float: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
-    .division {
-        display: none;
-    }
-    .teacher-box:last-child:after {
-        content: "";
-        width: 100%;
-        height: 2px;
-        display: block;
-        position: absolute;
-        top: 5px;
-        border-bottom: 2px dashed #f2f2f2;
-    }
+
     .teacher-head {
-        width: 100px;
-        height: 100px;
-        border-radius: 100%;
-        position: absolute;
-        top: 0;
-    }
-    .teacher-head img {
         width: 100%;
-        height: 100%;
-    }
-
-    .teacher-info {
-        position: absolute;
-        width: 250px;
-        left: 110px;
-        box-sizing: border-box;
-    }
-
-    .teacher-name {
-        font-weight: bold;
-        font-size: 20px;
     }
 
     .teacher-brief {
-        margin-top: 5px;
-        text-indent: 2em;
+
+        margin: 0;
+        width: 100%;
+        padding: 15px 10px;
+        height: auto;
+    }
+
+    .info {
+        margin: 0;
+    }
+
+    .info, .map {
+        float: none;
+        width: 100%;
     }
 
     .gotop {
-        right: 10px;
+        right: 15px;
     }
-
 }

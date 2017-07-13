@@ -274,16 +274,18 @@ a cite {
 .layui-side-scroll {
     width: 220px;
     height: 100%;
-    overflow-x: hidden
+    overflow-x: hidden;
+
 }
 
 .layui-body {
     z-index: 998;
-    width: 100%;
+
     height: 400px;
     overflow: hidden;
-    background-image: url("../images/banner3-1.jpg");
+    background-image: url("../images/0.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -336,7 +338,7 @@ a cite {
     margin-bottom: 10px;
     padding: 15px;
     line-height: 22px;
-    border-left: 5px solid #009688;
+    border-left: 5px solid #f95215;
     border-radius: 0 2px 2px 0;
     background-color: #f2f2f2
 }
@@ -1666,7 +1668,7 @@ a cite {
     top: 0;
     width: 0;
     height: 5px;
-    background-color: #5FB878;
+    background-color: #f95215;
     transition: all .2s;
     -webkit-transition: all .2s
 }
